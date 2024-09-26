@@ -1,0 +1,76 @@
+.global_hero {
+  width: 100%;
+  margin-top: 81px;
+  /* background-color: #fff; */
+}
+.landing_hero {
+  width: 100%;
+  height: 687px;
+  display: flex;
+  justify-content: space-between;
+  background-position: center 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  align-items: center;
+  position: relative;
+}
+.text_hero {
+  width: 55%;
+  margin-bottom: 81px;
+}
+.text_hero h1 {
+  font-size: 82px;
+  line-height: 85px;
+  background: linear-gradient(90deg, #423e5c -100%, #fff 40%);
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+  letter-spacing: -1.639px;
+}
+
+.resume_hero {
+  display: flex;
+  align-items: center;
+  margin-top: 62px;
+  gap: 30px;
+}
+.resume_hero a {
+  height: 68px;
+  background: #5a547c;
+  border-radius: 0.8em;
+  text-align: center;
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: inherit;
+  color: white;
+}
+
+.resume_hero a span {
+  line-height: 68px;
+  padding: 0 30px;
+  white-space: nowrap;
+}
+.resume_hero p {
+  color: #fff6ff;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 33.7px;
+  letter-spacing: -0.641px;
+  white-space: nowrap;
+}
+.resume_hero .resume_img {
+  width: 28px;
+}
+
+.img_hero img {
+  width: 600px;
+  margin-left: 50px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: scale(1);
+  margin-bottom: 81px;
+}
