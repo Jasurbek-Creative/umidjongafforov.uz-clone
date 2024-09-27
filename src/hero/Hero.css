@@ -14,6 +14,9 @@
   align-items: center;
   position: relative;
 }
+.landing_hero ::selection {
+  background-color: transparent;
+}
 .text_hero {
   width: 55%;
   margin-bottom: 81px;

@@ -1,3 +1,5 @@
+
+
 .global_nav {
   display: flex;
   align-items: center;
@@ -10,6 +12,7 @@
   max-width: 1510px;
   width: 100%;
   z-index: 999;
+  background-color: rgb(2, 8, 23,.7);
 }
 
 .nav_left-right {

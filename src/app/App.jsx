@@ -1,3 +1,4 @@
+import About from "../about/About";
 import Hero from "../hero/hero";
 import Navbar from "../navbar/navbar";
 
@@ -8,6 +9,7 @@ function App() {
     <div className="global_landing">
       <Navbar />
       <Hero />
+      <About />
     </div>
   );
 }
