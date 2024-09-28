@@ -1,4 +1,5 @@
 import "./About.css";
+import VerticalCarousel from "./Carousel";
 const About = () => {
   return (
     <div className="about" id="about">
@@ -14,7 +15,9 @@ const About = () => {
           to new technologies and creative coding.`}
         </p>
       </div>
-      <div className="about_calouser"></div>
+      <div className="about_calouser">
+        <VerticalCarousel />
+      </div>
     </div>
   );
 };
