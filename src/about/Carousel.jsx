@@ -40,7 +40,10 @@ const Carousel = () => {
         onClick={() => sliderRef.current.slickPrev()}
         disabled={activeSlide === 0}
       >
-        <FontAwesomeIcon className="icon" icon={faArrowUp} />
+        <FontAwesomeIcon
+          className={`icon ${activeSlide === 0 && "disabled"}`}
+          icon={faArrowUp}
+        />
       </span>
 
       <div className="slider_carousel">
@@ -65,7 +68,10 @@ const Carousel = () => {
         onClick={() => sliderRef.current.slickNext()}
         disabled={activeSlide === totalSlides - 1}
       >
-        <FontAwesomeIcon className="icon" icon={faArrowDown} />
+        <FontAwesomeIcon
+          className={`icon ${activeSlide === 3 && "disabled"}`}
+          icon={faArrowDown}
+        />
       </span>
     </div>
   );

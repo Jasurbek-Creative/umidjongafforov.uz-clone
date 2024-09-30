@@ -1,7 +1,8 @@
 .about {
-  /* margin-top: 5rem;
-  margin-bottom: 6rem;
-  height: 100%; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5rem;
 }
 .about ::selection {
   background-color: transparent;
@@ -9,6 +10,7 @@
 
 .about_text {
   max-width: 650px;
+  width: 100%;
 }
 .about_text .about_title,
 h3,
@@ -44,7 +46,6 @@ p {
 
 .slider_container {
   width: 500px;
-  /* height: 300px; */
 }
 .slider_container > span {
   display: flex;
@@ -54,33 +55,42 @@ p {
   height: 30px;
   border: 1px solid hsl(217.2 32.6% 17.5%);
   border-radius: 999px;
-
   background-color: hsl(222.2 84% 4.9%);
+  color: white;
+}
+
+.slider_container > span:hover {
+  color: white;
+  background-color: hsl(217.2 32.6% 17.5%);
+}
+
+.slider_container > span .disabled {
+  opacity: 0.5;
+  pointer-events: none !important;
 }
 
 .slider_container > span > .icon {
-  color: white;
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
 
-.slider_carousel {
-}
-
-.card {
-}
 .slick-slide {
   padding-bottom: 15px;
 }
 
+.slider_carousel {
+  padding: 24px;
+  height: 286px;
+}
+
 .card > h3 {
-  margin: 0;
   height: calc(286px - 48px);
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 18px;
+  background-color: #423e5c;
   text-align: center;
   border: 1px solid hsl(217.2 32.6% 17.5%);
   border-radius: 0.5rem;
@@ -96,9 +106,9 @@ p {
 }
 
 .top-button {
-  top: -10px;
+  top: -20px;
 }
 
 .bottom-button {
-  bottom: -10px;
+  bottom: -20px;
 }
