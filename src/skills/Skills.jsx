@@ -21,6 +21,7 @@ import {
   faUserShield,
   faWandMagic,
 } from "@fortawesome/free-solid-svg-icons";
+import { width } from "@fortawesome/free-brands-svg-icons/fa42Group";
 const Skills = () => {
   const iconsFront = [
     {
@@ -313,6 +314,8 @@ const Skills = () => {
   const modalRef = useRef(null);
   const [isHovered, setIsHovered] = useState(null);
   const [isHoveredBack, setIsHoveredBack] = useState(null);
+  const [isHoveredModal, setIsHoveredModal] = useState(null);
+  const [isHoveredModal2, setIsHoveredModal2] = useState(null);
 
   const openModal = (icon) => {
     setSelectedImage(icon);
@@ -330,6 +333,14 @@ const Skills = () => {
   });
   const styleBack = (index) => ({
     color: isHoveredBack === index ? iconsBack[index].color : "white",
+    transition: "color 0.3s ease",
+  });
+  const styleIcon_Modal_1 = (index) => ({
+    color: isHoveredModal === index ? index : "white",
+    transition: "color 0.3s ease",
+  });
+  const styleIcon_Modal_2 = (index) => ({
+    color: isHoveredModal2 === index ? index : "white",
     transition: "color 0.3s ease",
   });
 
@@ -444,12 +455,37 @@ const Skills = () => {
             <span className="close" onClick={closeModal}>
               &times;
             </span>
-            <FontAwesomeIcon
-              icon={selectedImage.icon}
-              className="modal-image"
-            />
-            <h2>{selectedImage.name}</h2>
-            <p>Percent: {selectedImage.percent}%</p>
+            {selectedImage.icon !== null ? (
+              <FontAwesomeIcon
+                icon={selectedImage.icon}
+                className="modal-image"
+                style={styleIcon_Modal_1(selectedImage.color)}
+                onMouseEnter={() => setIsHoveredModal(selectedImage.color)}
+                onMouseLeave={() => setIsHoveredModal(null)}
+              />
+            ) : (
+              <IconImg
+                className={`icon_img modal_icon ${selectedImage.icon_class}`}
+                // style={styleIcon_Modal_2(selectedImage.color)}
+                // onMouseEnter={() => setIsHoveredModal2(selectedImage.color)}
+                // onMouseLeave={() => setIsHoveredModal2(null)}
+              />
+            )}
+            <h2 className="modal_title">{selectedImage.name}</h2>
+            <p className="modal_pragraph">{selectedImage.info}</p>
+            <div>
+              <p className="level_me">Level Me:</p>
+              <div className="precent_level">
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value={selectedImage.percent}
+                  style={{ width: "100%" }}
+                />
+                <span className="skills_precent">{selectedImage.percent}%</span>
+              </div>
+            </div>
           </div>
         </div>
       )}

@@ -2,5 +2,21 @@
   margin: 0 auto;
   max-width: 1510px;
   padding: 0 20px;
-  
+}
+
+::-webkit-scrollbar {
+  width: 0.4em;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333047;
+  border-radius: 10em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333047b9;
 }

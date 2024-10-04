@@ -4,8 +4,8 @@ import Navbar from "../navbar/navbar";
 import Skills from "../skills/Skills";
 import "devicon/devicon.min.css";
 
-
 import "./App.css";
+import Project from "../project/Project";
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
       <Hero />
       <About />
       <Skills />
+      <Project />
     </div>
   );
 }
